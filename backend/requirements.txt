@@ -1,0 +1,32 @@
+# ── Web Framework ──────────────────────────────────────────────────────────────
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9          # Required for file uploads
+
+# ── AI / ML ────────────────────────────────────────────────────────────────────
+openai-whisper==20231117         # Speech-to-text
+openai==1.30.1                   # GPT-4 summarization + embeddings
+faiss-cpu==1.8.0                 # Vector similarity search (RAG)
+numpy==1.26.4                    # Required by FAISS / Whisper
+
+# ── Translation ────────────────────────────────────────────────────────────────
+google-cloud-translate==3.15.3   # Google Translate API v3
+langdetect==1.0.9                # Lightweight language detection fallback
+
+# ── Database ───────────────────────────────────────────────────────────────────
+motor==3.4.0                     # Async MongoDB driver (wraps PyMongo)
+pymongo==4.7.2                   # Sync MongoDB (used by motor)
+
+# ── Data Validation ────────────────────────────────────────────────────────────
+pydantic==2.7.1
+pydantic-settings==2.2.1         # Settings management via .env
+
+# ── Utilities ──────────────────────────────────────────────────────────────────
+python-dotenv==1.0.1
+aiofiles==23.2.1                 # Async file I/O
+tiktoken==0.7.0                  # Token counting for GPT context limits
+
+# ── Dev / Testing (optional) ───────────────────────────────────────────────────
+httpx==0.27.0                    # Async HTTP client (for tests)
+pytest==8.2.0
+pytest-asyncio==0.23.6
